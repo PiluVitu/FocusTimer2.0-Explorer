@@ -1,0 +1,102 @@
+:root {
+  font-size: 62.5%;
+
+  --icon-color: hsl(240, 6%, 21%);
+  --bg-color: hsl(0, 0%, 100%);
+  --bg--selected-button: hsl(194, 97%, 31%);
+  --bg-button: hsl(240, 9%, 89%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  background: none;
+}
+body {
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-self: center;
+  background: #ffff;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19.2rem;
+}
+
+.sideA {
+  display: grid;
+  gap: 4.8rem;
+  max-width: 33.1rem;
+}
+
+.sideA .hours span {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(3rem, 4rem + 4vw, 12.7rem);
+  line-height: 14.8rem;
+}
+
+.sideA .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.sideA .hours svg {
+  width: clamp(2rem,4.8rem,4.8rem);
+  height: clamp(2rem,4.8rem,4.8rem);
+}
+
+.sideB {
+  max-width: 30.8rem;
+}
+.sideB .soundCards {
+  width: 100%;
+  display: grid;
+  gap: 3.2rem;
+}
+.sideB .soundCards button {
+  background: var(--bg-button);
+  border-radius: 24px;
+  padding: 4.8rem 4.6rem;
+}
+.sideB .soundCards button svg path {
+  fill: #323238;
+}
+.sideB .soundCards button:hover,
+.sideB .soundCards button:focus {
+  background: var(--bg--selected-button);
+}
+.sideB .soundCards button:hover svg path,
+.sideB .soundCards button:focus svg path {
+  fill: #ffff;
+}
+
+.sideB .soundCards button:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.sideB .soundCards button:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.sideB .soundCards button:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.sideB .soundCards button:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
