@@ -27,6 +27,7 @@ removeButton.addEventListener('click', function () {
 })
 natureSound.addEventListener('click', function () {
   Sounds().PressButton()
+  Sounds().NatureSound()
 })
 rainSound.addEventListener('click', function () {
   Sounds().PressButton()
