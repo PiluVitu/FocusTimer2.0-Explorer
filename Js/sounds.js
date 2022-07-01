@@ -1,15 +1,15 @@
 export default function Sounds() {
   const natureSound = new Audio(
-    'https://drive.google.com/file/d/1CRHkV72WUMdcqec5GT_KdsqFz0z3VAOA/view'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Floresta.wav'
   )
   const rainSound = new Audio(
-    'https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Chuva.wav'
   )
   const coffeeShopSound = new Audio(
-    'https://drive.google.com/file/d/1OxLKpCwg2wrxXFNUHgZxJ51QEt0ac5RA/view'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Cafeteria.wav'
   )
   const fireSound = new Audio(
-    'https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Lareira.wav'
   )
   const kitchenTimer = new Audio(
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
@@ -29,6 +29,7 @@ export default function Sounds() {
   }
 
   function NatureSound() {
+    natureSound.load()
     natureSound.play()
     natureSound.volume = 0.5
     natureSound.loop = true
