@@ -1,9 +1,9 @@
 export default function Sounds() {
   const natureSound = new Audio(
-    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Floresta.wav'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Floresta.mp3?raw=true'
   )
   const rainSound = new Audio(
-    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Chuva.wav'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Chuva.wav?raw=true'
   )
   const coffeeShopSound = new Audio(
     'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Cafeteria.wav'
