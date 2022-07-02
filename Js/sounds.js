@@ -30,24 +30,35 @@ export default function Sounds() {
 
   function Nature() {
     natureSound.play()
-    natureSound.volume = 0.5
     natureSound.loop = true
-    
   }
   function CoffeeShop() {
     coffeeShopSound.play()
-    coffeeShopSound.volume = 0.5
+    coffeeShopSound.volume = 0.8
     coffeeShopSound.loop = true
   }
   function Rain() {
     rainSound.play()
-    rainSound.volume = 0.5
+    rainSound.volume = 0.8
     rainSound.loop = true
   }
   function Fire() {
     fireSound.play()
-    fireSound.volume = 0.5
+    fireSound.volume = 0.8
     fireSound.loop = true
+  }
+  function NatureStop() {
+    natureSound.pause();
+    natureSound.currentTime = 0
+  }
+  function CoffeeShopStop() {
+    coffeeShopSound.pause()
+  }
+  function RainStop() {
+    rainSound.pause()
+  }
+  function FireStop() {
+    fireSound.pause()
   }
 
   return {
@@ -56,6 +67,10 @@ export default function Sounds() {
     Nature,
     CoffeeShop,
     Rain,
-    Fire
+    Fire,
+    NatureStop,
+    CoffeeShopStop,
+    RainStop,
+    FireStop
   }
 }

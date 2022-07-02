@@ -10,14 +10,13 @@ import {
   natureSound,
   rainSound,
   shopSound,
-  fireSound
+  fireSound,
+  natureSoundOff,
+  rainSoundOff,
+  shopSoundOff,
+  fireSoundOff
 } from './variable.js'
 import Sounds from './sounds.js'
-
-
-let minutesDisplay = document.querySelector('.minutes')
-const timer = Timer({minutesDisplay})
-
 
 playButton.addEventListener('click', function () {
   Sounds().PressButton()
@@ -27,25 +26,49 @@ stopButton.addEventListener('click', function () {
 })
 addButton.addEventListener('click', function () {
   Sounds().PressButton()
-  timer.AddMinutes()
+  Timer().AddMinutes()
 })
 removeButton.addEventListener('click', function () {
   Sounds().PressButton()
-  timer.RemoveMinutes()
+  Timer().RemoveMinutes()
 })
 natureSound.addEventListener('click', function () {
   Sounds().PressButton()
   Sounds().Nature()
+  natureSound.classList.add('hide')
+  natureSoundOff.classList.remove('hide')
+})
+natureSoundOff.addEventListener('click', function () {
+  Sounds().NatureStop()
+  Sounds().PressButton()
+  natureSoundOff.classList.add('hide')
+  natureSound.classList.remove('hide')
 })
 rainSound.addEventListener('click', function () {
   Sounds().PressButton()
   Sounds().Rain()
+  rainSound.classList.add('hide')
+  rainSoundOff.classList.remove('hide')
+})
+rainSoundOff.addEventListener('click', function () {
+  Sounds().PressButton()
+  Sounds().RainStop()
+  rainSoundOff.classList.add('hide')
+  rainSound.classList.remove('hide')
 })
 shopSound.addEventListener('click', function () {
   Sounds().PressButton()
   Sounds().CoffeeShop()
 })
+shopSoundOff.addEventListener('click', function () {
+  Sounds().PressButton()
+  Sounds().CoffeeShopStop()
+})
 fireSound.addEventListener('click', function () {
   Sounds().PressButton()
   Sounds().Fire()
+})
+fireSoundOff.addEventListener('click', function () {
+  Sounds().PressButton()
+  Sounds().FireStop()
 })

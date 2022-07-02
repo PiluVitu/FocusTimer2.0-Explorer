@@ -1,4 +1,5 @@
-export default function Timer({ minutesDisplay }) {
+export default function Timer() {
+  let minutesDisplay = document.querySelector('.minutes')
   let minutes = Number(minutesDisplay.textContent)
   function AddMinutes() {
     const sum = minutes + 5
