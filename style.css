@@ -128,3 +128,8 @@ max-height: 4.8rem;
     font-size: 7.5rem;
   }
 }
+
+.soundOn, .soundOff {
+  background: red;
+  border: 2px solid black;
+}

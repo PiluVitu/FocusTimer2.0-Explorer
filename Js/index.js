@@ -72,3 +72,17 @@ fireSoundOff.addEventListener('click', function () {
   Sounds().PressButton()
   Sounds().FireStop()
 })
+
+const burytheluz = new Audio(
+  'https://www.myinstants.com/pt/instant/aaal-41211/?utm_source=copy&utm_medium=share'
+)
+
+let buttonBury = document.querySelector('.soundOn')
+let buttonBuryOff = document.querySelector('.soundOff')
+
+buttonBury.addEventListener('click', function(){
+  burytheluz.play()
+})
+buttonBuryOff.addEventListener('click', function(){
+  burytheluz.pause()
+})
