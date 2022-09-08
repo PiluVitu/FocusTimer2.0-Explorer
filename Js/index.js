@@ -15,5 +15,6 @@ Events({
   Timer: timer
 })
 
-
 Timer()
+
+console.log('Mozovo')
