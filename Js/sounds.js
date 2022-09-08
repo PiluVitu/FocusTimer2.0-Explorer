@@ -1,6 +1,6 @@
 export default function Sounds() {
   const natureSound = new Audio(
-    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Floresta.mp3?raw=true'
+    'https://github.com/PiluVitu/FocusTimer2.0-Explorer/raw/main/Assets/Floresta.mp3'
   )
   const rainSound = new Audio(
     'https://github.com/PiluVitu/FocusTimer2.0-Explorer/blob/main/Assets/Chuva.mp3?raw=true'
@@ -28,49 +28,20 @@ export default function Sounds() {
     kitchenTimer.volume = 0.5
   }
 
-  function Nature() {
-    natureSound.play()
-    natureSound.loop = true
-  }
-  function CoffeeShop() {
-    coffeeShopSound.play()
-    coffeeShopSound.volume = 0.8
-    coffeeShopSound.loop = true
-  }
-  function Rain() {
-    rainSound.play()
-    rainSound.volume = 0.8
-    rainSound.loop = true
-  }
-  function Fire() {
-    fireSound.play()
-    fireSound.volume = 0.8
-    fireSound.loop = true
-  }
-  function NatureStop() {
-    natureSound.pause();
-    natureSound.currentTime = 0
-  }
-  function CoffeeShopStop() {
-    coffeeShopSound.pause()
-  }
-  function RainStop() {
-    rainSound.pause()
-  }
-  function FireStop() {
-    fireSound.pause()
+  function SoundOnOff(sound, button) {
+    let active = button.classList.contains('active')
+
+    active === false ? sound.pause() : sound.play()
+    sound.loop = true
   }
 
   return {
     PressButton,
     TimerComplete,
-    Nature,
-    CoffeeShop,
-    Rain,
-    Fire,
-    NatureStop,
-    CoffeeShopStop,
-    RainStop,
-    FireStop
+    SoundOnOff,
+    natureSound,
+    rainSound,
+    coffeeShopSound,
+    fireSound
   }
 }
